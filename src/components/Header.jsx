@@ -1,10 +1,15 @@
 import Navigation from './Navigation';
 import UserIcon from './UserIcon';
+import '../styles/Header.css';
 
 const Header = () => (
   <header>
-    <Navigation />
-    <UserIcon />
+    <div className="container">
+      <div className="navigation">
+        <Navigation />
+        <UserIcon />
+      </div>
+    </div>
   </header>
 );
 

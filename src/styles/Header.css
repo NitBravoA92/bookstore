@@ -1,0 +1,54 @@
+header {
+  width: 100%;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: 700;
+  color: #278dec;
+}
+
+#menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-item a {
+  color: #aeaeae;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.nav-item a.active {
+  color: #373737;
+  font-weight: 600;
+}
+
+.user-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #278dec;
+  font-size: 1.2em;
+}
