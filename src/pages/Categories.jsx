@@ -3,8 +3,9 @@ import Layout from './Layout';
 const Categories = () => (
   <Layout>
     <section className="page" id="categories">
-      <h1>Categories</h1>
-      <h2>This page is not available.</h2>
+      <div className="container">
+        <h2>This page will be developed soon...</h2>
+      </div>
     </section>
   </Layout>
 );
