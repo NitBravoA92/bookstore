@@ -9,9 +9,12 @@
     max-width: 720px;
   }
 
-  .book-info,
+  .book-info {
+    width: 30%;
+  }
+
   .book-chapters-info {
-    width: 50%;
+    width: 70%;
   }
 }
 
@@ -19,10 +22,26 @@
   .container {
     max-width: 960px;
   }
+
+  .book-info {
+    width: 40%;
+  }
+
+  .book-chapters-info {
+    width: 60%;
+  }
 }
 
 @media (min-width: 1200px) {
   .container {
     max-width: 1140px;
+  }
+
+  .book-info {
+    width: 45%;
+  }
+
+  .book-chapters-info {
+    width: 55%;
   }
 }
