@@ -1,24 +1,15 @@
-import { useState } from 'react';
 import Book from './Book';
 import booksData from '../store/data';
 import BookForm from './BookForm';
 import '../styles/Books.css';
 
-const BooksContent = () => {
-  const [books, setBooks] = useState(booksData);
-
-  const removeBook = (id) => {
-    setBooks(books.filter((book) => book.id !== id));
-  };
-
-  return (
-    <>
-      <div className="book-list">
-        {books.map((book) => (<Book key={book.id} book={book} handleRemoveBook={removeBook} />))}
-      </div>
-      <BookForm />
-    </>
-  );
-};
+const BooksContent = () => (
+  <>
+    <div className="book-list">
+      {booksData.map((book) => (<Book key={book.id} book={book} />))}
+    </div>
+    <BookForm />
+  </>
+);
 
 export default BooksContent;

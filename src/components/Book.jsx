@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import BookInfo from './BookInfo';
 import BookChapters from './BookChapters';
 
-const Book = ({ book, handleRemoveBook }) => {
+const Book = ({ book }) => {
   const {
     id, title, author, completed, chapter,
   } = book;
   return (
     <div className="book-item">
-      <BookInfo book={{ id, title, author }} handleRemoveBook={handleRemoveBook} />
+      <BookInfo book={{ id, title, author }} />
       <BookChapters chapterInfo={{ completed, chapter }} />
     </div>
   );
@@ -22,7 +22,6 @@ Book.propTypes = {
     completed: PropTypes.string.isRequired,
     chapter: PropTypes.string.isRequired,
   }).isRequired,
-  handleRemoveBook: PropTypes.func.isRequired,
 };
 
 export default Book;

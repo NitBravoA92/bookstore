@@ -1,9 +1,8 @@
 import PropTypes from 'prop-types';
 
-const BookInfo = ({ book, handleRemoveBook }) => {
-  const {
-    id, title, author,
-  } = book;
+const BookInfo = ({ book }) => {
+  const { title, author } = book;
+
   return (
     <div className="book-info">
       <h3 className="book-title">{title}</h3>
@@ -14,7 +13,6 @@ const BookInfo = ({ book, handleRemoveBook }) => {
           <button
             type="button"
             className="remove-book"
-            onClick={() => handleRemoveBook(id)}
           >
             Remove
           </button>
@@ -27,11 +25,9 @@ const BookInfo = ({ book, handleRemoveBook }) => {
 
 BookInfo.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
   }).isRequired,
-  handleRemoveBook: PropTypes.func.isRequired,
 };
 
 export default BookInfo;
