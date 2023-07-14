@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 2.5rem;
+  padding: 1.5rem 2.5rem;
   background-color: #fff;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
@@ -14,6 +14,15 @@
   border: 2px solid #0290ff;
 }
 
+.book-info,
+.book-chapters-info {
+  width: 100%;
+}
+
+.book-info {
+  font-family: 'Roboto Slab', serif;
+}
+
 .book-title {
   font-size: 1.25em;
   font-weight: 700;
@@ -21,7 +30,7 @@
   line-height: 1.2;
   letter-spacing: normal;
   color: #121212;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.35rem;
 }
 
 .book-actions {
@@ -33,7 +42,7 @@
 .book-author,
 .book-actions li,
 .book-actions li button {
-  font-size: 0.85em;
+  font-size: 0.75em;
   font-weight: 300;
   font-stretch: normal;
   line-height: 1.2;
@@ -42,11 +51,130 @@
 }
 
 .book-author {
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.7rem;
 }
 
 .book-actions li button {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  font-size: 1em;
+  font-family: 'Roboto Slab', serif;
+}
+
+.book-chapters-info {
+  display: flex;
+  align-items: center;
+  gap: 7rem;
+}
+
+/* progress bar */
+
+.book-chapters {
+  position: relative;
+  font-family: 'Roboto Slab', serif;
+}
+
+.book-chapters::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -3.5rem;
+  width: 1px;
+  height: 70%;
+  background-color: #e5e5e5;
+  transform: translateY(-50%);
+}
+
+.book-current-chapter {
+  font-size: 0.75em;
+  font-weight: 300;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #aeaeae;
+  margin-bottom: 0.35rem;
+}
+
+.book-chapters-count {
+  font-size: 0.95em;
+  font-weight: 400;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #373737;
+  margin-bottom: 1.3rem;
+}
+
+.book-update-progress {
+  outline: none;
+  padding: 0.6rem 1.5rem;
+  background-color: #0290ff;
+  border: none;
+  border-radius: 0.2rem;
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: 300;
+  font-family: 'Roboto Slab', serif;
+}
+
+.book-form {
+  margin: 3rem 0.063rem 2.5rem 0;
+  border-top: 1.5px solid #e5e5e5;
+}
+
+.book-form-title {
+  padding: 1.8rem 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.book-add-book-form {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.book-input {
+  padding: 0.813rem 0.813rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-size: 1em;
+  color: #373737;
+}
+
+.book-input::placeholder {
+  color: #888;
+  opacity: 0.4;
+}
+
+#inputTitle {
+  width: 60%;
+}
+
+#inputAuthor {
+  width: 25%;
+}
+
+#btn-add-book {
+  width: 15%;
+  padding: 0.801rem 0.886rem;
+  border: none;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
