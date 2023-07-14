@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+import BookCircularBar from './BookCircularBar';
 
 const BookChapters = ({ chapterInfo }) => (
   <div className="book-chapters-info">
-    <div className="book-progress">{chapterInfo.completed}</div>
+    <BookCircularBar completed={chapterInfo.completed} />
     <div className="book-chapters">
       <p className="book-current-chapter">CURRENT CHAPTER</p>
       <p className="book-chapters-count">
@@ -10,7 +11,9 @@ const BookChapters = ({ chapterInfo }) => (
         {' '}
         {chapterInfo.chapter}
       </p>
-      <button type="button" className="book-update-progress">UPDATE PROGRESS</button>
+      <button type="button" className="book-update-progress">
+        UPDATE PROGRESS
+      </button>
     </div>
   </div>
 );
