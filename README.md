@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 <div align="center">
   <br/>
-  <h1><b># Bookstore WebApp</b></h1>
+  <h1><b>Bookstore WebApp</b></h1>
 </div>
 
 # 📗 Table of Contents
