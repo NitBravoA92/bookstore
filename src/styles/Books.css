@@ -68,7 +68,58 @@
   gap: 7rem;
 }
 
-/* progress bar */
+.book-progress {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+.circular-container {
+  width: 5.625rem;
+  height: 5.62rem;
+  padding: 0.62rem 0.625rem 0.75rem 0.75rem;
+}
+
+.circular {
+  position: relative;
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: 50%;
+  background: conic-gradient(#2c88d9 230deg, rgb(18, 18, 18, 0.1) 0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular::before {
+  content: '';
+  position: absolute;
+  height: 3.70rem;
+  width: 3.70rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.progress-info-percentage {
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.progress-completed-text {
+  opacity: 0.5;
+  font-size: 0.875em;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
 
 .book-chapters {
   position: relative;
