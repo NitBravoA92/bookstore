@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const BookCicularBar = ({ completed }) => (
+const BookCircularBar = ({ completed }) => (
   <div className="book-progress">
     <div className="circular-container">
       <div className="circular" />
@@ -12,8 +12,8 @@ const BookCicularBar = ({ completed }) => (
   </div>
 );
 
-BookCicularBar.propTypes = {
+BookCircularBar.propTypes = {
   completed: PropTypes.string.isRequired,
 };
 
-export default BookCicularBar;
+export default BookCircularBar;
