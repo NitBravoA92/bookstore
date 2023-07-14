@@ -1,9 +1,12 @@
 import Layout from './Layout';
+import BookList from '../components/BookList';
 
 const Books = () => (
   <Layout>
     <section className="page" id="books">
-      <h1>Books</h1>
+      <div className="container">
+        <BookList />
+      </div>
     </section>
   </Layout>
 );
