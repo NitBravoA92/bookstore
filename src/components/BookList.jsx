@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Book from './Book';
 import booksData from '../store/data';
+import BookForm from './BookForm';
 import '../styles/Books.css';
 
 const BookList = () => {
@@ -11,9 +12,12 @@ const BookList = () => {
   };
 
   return (
-    <div className="book-list">
-      {books.map((book) => (<Book key={book.id} book={book} handleRemoveBook={removeBook} />))}
-    </div>
+    <>
+      <div className="book-list">
+        {books.map((book) => (<Book key={book.id} book={book} handleRemoveBook={removeBook} />))}
+      </div>
+      <BookForm />
+    </>
   );
 };
 
