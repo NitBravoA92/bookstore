@@ -88,8 +88,8 @@
 .circular::before {
   content: '';
   position: absolute;
-  height: 3.70rem;
-  width: 3.70rem;
+  height: 3.7rem;
+  width: 3.7rem;
   border-radius: 50%;
   background-color: #fff;
 }
@@ -145,7 +145,6 @@
   margin: 0.75rem 0 0.563rem 0;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
   border-radius: 3px;
-
   text-align: center;
   color: #fff;
   font-size: 0.813rem;
