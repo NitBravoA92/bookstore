@@ -4,7 +4,7 @@ import Logo from './Logo';
 const Navigation = () => (
   <nav>
     <Logo />
-    <ul id="navigation">
+    <ul id="menu">
       <NavigationLink link="/" title="BOOKS" />
       <NavigationLink link="/categories" title="CATEGORIES" />
     </ul>
