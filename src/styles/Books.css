@@ -1,0 +1,52 @@
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.045);
+  border: 2px solid #e5e5e5;
+}
+
+.book-item:hover {
+  border: 2px solid #0290ff;
+}
+
+.book-title {
+  font-size: 1.25em;
+  font-weight: 700;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #121212;
+  margin-bottom: 0.2rem;
+}
+
+.book-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.book-author,
+.book-actions li,
+.book-actions li button {
+  font-size: 0.85em;
+  font-weight: 300;
+  font-stretch: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #0290ff;
+}
+
+.book-author {
+  margin-bottom: 1.3rem;
+}
+
+.book-actions li button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

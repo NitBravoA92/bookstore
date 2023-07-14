@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Book from './Book';
 import booksData from '../store/data';
+import '../styles/Books.css';
 
 const BookList = () => {
   const [books, setBooks] = useState(booksData);
