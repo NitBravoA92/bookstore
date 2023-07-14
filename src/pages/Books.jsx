@@ -1,11 +1,11 @@
 import Layout from './Layout';
-import BookList from '../components/BookList';
+import BooksContent from '../components/BooksContent';
 
 const Books = () => (
   <Layout>
     <section className="page" id="books">
       <div className="container">
-        <BookList />
+        <BooksContent />
       </div>
     </section>
   </Layout>

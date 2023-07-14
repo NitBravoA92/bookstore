@@ -4,7 +4,7 @@ import booksData from '../store/data';
 import BookForm from './BookForm';
 import '../styles/Books.css';
 
-const BookList = () => {
+const BooksContent = () => {
   const [books, setBooks] = useState(booksData);
 
   const removeBook = (id) => {
@@ -21,4 +21,4 @@ const BookList = () => {
   );
 };
 
-export default BookList;
+export default BooksContent;
