@@ -1,0 +1,212 @@
+.book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  margin-bottom: 1rem;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.045);
+  padding: 2.5rem 0 1.825rem 1.688rem;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+}
+
+.book-item:hover {
+  border: 1px solid #0290ff;
+}
+
+.book-info,
+.book-chapters-info {
+  width: 100%;
+}
+
+.book-info {
+  font-family: 'Roboto Slab', serif;
+}
+
+.book-title {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #121212;
+  margin: 0.188rem 0;
+  letter-spacing: -0.2px;
+}
+
+.book-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.book-author,
+.book-actions li,
+.book-actions li button {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.book-author {
+  margin-bottom: 1.5rem;
+}
+
+.book-actions li button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Roboto Slab', serif;
+}
+
+.book-chapters-info {
+  display: flex;
+  align-items: center;
+  gap: 8rem;
+}
+
+.book-progress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.circular-container {
+  width: 5.625rem;
+  height: 5.62rem;
+  padding: 0.62rem 0.625rem 0.75rem 0.75rem;
+}
+
+.circular {
+  position: relative;
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: 50%;
+  background: conic-gradient(#2c88d9 230deg, rgb(18, 18, 18, 0.1) 0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circular::before {
+  content: '';
+  position: absolute;
+  height: 3.7rem;
+  width: 3.7rem;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.progress-info-percentage {
+  font-size: 2rem;
+  color: #121212;
+  margin: 0.063rem 0;
+}
+
+.progress-completed-text {
+  opacity: 0.5;
+  font-size: 0.875em;
+  color: #121212;
+  margin: 0.238rem 0 0.75rem 0;
+}
+
+.book-chapters {
+  position: relative;
+  font-family: 'Roboto Slab', serif;
+}
+
+.book-chapters::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -3.5rem;
+  width: 1px;
+  height: 70%;
+  background-color: #e5e5e5;
+  transform: translateY(-50%);
+}
+
+.book-current-chapter {
+  font-size: 0.813rem;
+  font-weight: 300;
+  opacity: 0.5;
+  color: #121212;
+  margin-top: 0.063rem;
+}
+
+.book-chapters-count {
+  font-size: 1rem;
+  color: #121212;
+  letter-spacing: -0.4px;
+  margin: 0.438rem 0 0.25rem 0;
+}
+
+.book-update-progress {
+  background-color: #0290ff;
+  outline: none;
+  border: none;
+  margin: 0.75rem 0 0.563rem 0;
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  text-align: center;
+  color: #fff;
+  font-size: 0.813rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-family: 'Roboto Slab', serif;
+}
+
+.book-form {
+  margin: 3rem 0.063rem 2.5rem 0;
+  border-top: 1.5px solid #e5e5e5;
+}
+
+.book-form-title {
+  padding: 1.8rem 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.book-add-book-form {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.book-input {
+  padding: 0.813rem 0.813rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-size: 1em;
+  color: #373737;
+}
+
+.book-input::placeholder {
+  color: #888;
+  opacity: 0.4;
+}
+
+#inputTitle {
+  width: 60%;
+}
+
+#inputAuthor {
+  width: 25%;
+}
+
+#btn-add-book {
+  width: 15%;
+  padding: 0.801rem 0.886rem;
+  border: none;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+}

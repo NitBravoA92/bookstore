@@ -1,0 +1,47 @@
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+
+  .book-info {
+    width: 30%;
+  }
+
+  .book-chapters-info {
+    width: 70%;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+
+  .book-info {
+    width: 40%;
+  }
+
+  .book-chapters-info {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+
+  .book-info {
+    width: 45%;
+  }
+
+  .book-chapters-info {
+    width: 55%;
+  }
+}
