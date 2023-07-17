@@ -156,7 +156,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [x] **Initialize project with components**
-- [ ] **Add reducers and actions**
+- [x] **Add reducers and actions**
 - [ ] **Use Redux to manage the state of the components**
 - [ ] **Connect to the Bookstore API**
 
