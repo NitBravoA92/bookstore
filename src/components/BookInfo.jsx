@@ -1,7 +1,15 @@
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { removeBook } from '../redux/books/booksSlice';
 
 const BookInfo = ({ book }) => {
-  const { title, author } = book;
+  const { id, title, author } = book;
+
+  const dispatch = useDispatch();
+
+  const handleRemoveClick = (idBook) => {
+    dispatch(removeBook(idBook));
+  };
 
   return (
     <div className="book-info">
@@ -13,6 +21,7 @@ const BookInfo = ({ book }) => {
           <button
             type="button"
             className="remove-book"
+            onClick={() => { handleRemoveClick(id); }}
           >
             Remove
           </button>
@@ -25,6 +34,7 @@ const BookInfo = ({ book }) => {
 
 BookInfo.propTypes = {
   book: PropTypes.shape({
+    id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
   }).isRequired,
