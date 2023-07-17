@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/bookSlice';
+import { addBook } from '../redux/books/booksSlice';
 import BookElement from '../helpers/BookElement';
 
 const BookForm = () => {
