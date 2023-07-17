@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/bookSlice';
-import BookElement from '../store/data';
+import BookElement from '../helpers/BookElement';
 
 const BookForm = () => {
   const dispatch = useDispatch();
