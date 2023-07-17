@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = [];
 
@@ -7,7 +7,7 @@ const categoriesSlice = createSlice({
   initialState,
   reducers: {
     getStatus: (state) => {
-      if(state.length === 0) {
+      if (state.length === 0) {
         return 'Under construction';
       }
       return state;

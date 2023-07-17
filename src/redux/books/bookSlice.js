@@ -1,6 +1,6 @@
-import { createSlice} from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-const bookSlice = createSlice({ 
+const bookSlice = createSlice({
   name: 'books',
   initialState: [],
   reducers: {
@@ -9,7 +9,7 @@ const bookSlice = createSlice({
     },
     removeBook: (state, action) => {
       const findBook = state.find((book) => book.id === action.payload);
-      if(findBook) {
+      if (findBook) {
         state.splice(state.indexOf(findBook), 1);
       }
     },

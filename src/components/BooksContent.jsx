@@ -13,6 +13,6 @@ const BooksContent = () => {
       <BookForm />
     </>
   );
-}
+};
 
 export default BooksContent;

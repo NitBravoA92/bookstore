@@ -1,9 +1,9 @@
-import { useSelector, useDispatch } from "react-redux";
-import Layout from "./Layout";
+import { useSelector, useDispatch } from 'react-redux';
+import Layout from './Layout';
 
 const Categories = () => {
   const dispatch = useDispatch();
-  dispatch({ type: "categories/getStatus" });
+  dispatch({ type: 'categories/getStatus' });
 
   const categories = useSelector((state) => state.categories);
 
