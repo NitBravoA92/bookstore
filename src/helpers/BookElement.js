@@ -4,6 +4,7 @@ const BookElement = (title, author) => ({
   id: uuidv4(),
   title,
   author,
+  category: "Fiction",
   completed: '64%',
   chapter: '17',
 });
