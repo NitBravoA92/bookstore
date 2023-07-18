@@ -157,7 +157,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 - [x] **Initialize project with components**
 - [x] **Add reducers and actions**
-- [ ] **Use Redux to manage the state of the components**
+- [x] **Use Redux to manage the state of the components**
 - [ ] **Connect to the Bookstore API**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
