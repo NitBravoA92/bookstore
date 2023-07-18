@@ -1,13 +1,14 @@
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/booksSlice';
+import RemoveButton from './RemoveButton';
 
 const BookInfo = ({ book }) => {
   const { id, title, author } = book;
 
   const dispatch = useDispatch();
 
-  const handleRemoveClick = (idBook) => {
+  const handleClick = (idBook) => {
     dispatch(removeBook(idBook));
   };
 
@@ -18,13 +19,7 @@ const BookInfo = ({ book }) => {
       <ul className="book-actions">
         <li>Comments</li>
         <li>
-          <button
-            type="button"
-            className="remove-book"
-            onClick={() => { handleRemoveClick(id); }}
-          >
-            Remove
-          </button>
+          <RemoveButton handleRemoveClick={() => { handleClick(id); }} />
         </li>
         <li>Edit</li>
       </ul>
