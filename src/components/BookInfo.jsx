@@ -4,8 +4,6 @@ import { removeBook } from '../redux/books/booksSlice';
 import RemoveButton from './RemoveButton';
 
 const BookInfo = ({ book }) => {
-  const { id, title, author } = book;
-
   const dispatch = useDispatch();
 
   const handleClick = (idBook) => {
@@ -14,12 +12,13 @@ const BookInfo = ({ book }) => {
 
   return (
     <div className="book-info">
-      <h3 className="book-title">{title}</h3>
-      <p className="book-author">{author}</p>
+      <p>{book.category}</p>
+      <h3 className="book-title">{book.title}</h3>
+      <p className="book-author">{book.author}</p>
       <ul className="book-actions">
         <li>Comments</li>
         <li>
-          <RemoveButton handleRemoveClick={() => { handleClick(id); }} />
+          <RemoveButton handleRemoveClick={() => { handleClick(book.item_id); }} />
         </li>
         <li>Edit</li>
       </ul>
@@ -29,9 +28,10 @@ const BookInfo = ({ book }) => {
 
 BookInfo.propTypes = {
   book: PropTypes.shape({
-    id: PropTypes.string.isRequired,
+    item_id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
+    category: PropTypes.string.isRequired,
   }).isRequired,
 };
 
