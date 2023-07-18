@@ -4,7 +4,7 @@ import BookForm from './BookForm';
 import '../styles/Books.css';
 
 const BooksContent = () => {
-  const booksList = useSelector((state) => state.books);
+  const booksList = useSelector((store) => store.books);
   return (
     <>
       <div className="book-list">
