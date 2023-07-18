@@ -8,7 +8,7 @@ const BooksContent = () => {
   return (
     <>
       <div className="book-list">
-        {booksList.map((book) => (<Book key={book.id} book={book} />))}
+        {booksList.map((book) => (<Book key={book.item_id} book={book} />))}
       </div>
       <BookForm />
     </>
