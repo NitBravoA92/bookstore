@@ -1,6 +1,8 @@
 import { useDispatch } from 'react-redux';
 import { addBook } from '../redux/books/booksSlice';
 import BookElement from '../helpers/BookElement';
+import AddButton from './AddButton';
+import InputForm from './InputForm';
 
 const BookForm = () => {
   const dispatch = useDispatch();
@@ -17,9 +19,9 @@ const BookForm = () => {
     <div className="book-form">
       <p className="book-form-title">ADD NEW BOOK</p>
       <form className="book-add-book-form" onSubmit={handleSubmit}>
-        <input type="text" className="book-input" id="inputTitle" placeholder="Book title" required />
-        <input type="text" className="book-input" id="inputAuthor" placeholder="Author" required />
-        <button type="submit" id="btn-add-book">ADD BOOK</button>
+        <InputForm type="text" id="inputTitle" placeholder="Book title" isRequired />
+        <InputForm type="text" id="inputAuthor" placeholder="Book Author" isRequired />
+        <AddButton />
       </form>
     </div>
   );
