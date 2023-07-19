@@ -211,3 +211,32 @@
   letter-spacing: 0.5px;
   text-align: center;
 }
+
+.alert-message {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.alert-icon {
+  font-size: 10rem;
+}
+
+.alert-icon, 
+.alert-message {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.error .alert-message {
+  color: #ff0000;
+}
+
+.loading .alert-message {
+  color: #0290ff;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+}
+
+.no-books .alert-message {
+  color: #888;
+}
