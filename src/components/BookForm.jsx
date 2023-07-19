@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/booksSlice';
+import { addBookToApi } from '../redux/books/booksSlice';
 import BookElement from '../helpers/BookElement';
 import AddButton from './AddButton';
 import InputForm from './InputForm';
@@ -11,7 +11,7 @@ const BookForm = () => {
     e.preventDefault();
     const form = e.target;
     const { inputTitle, inputAuthor } = form;
-    dispatch(addBook(BookElement(inputTitle.value, inputAuthor.value)));
+    dispatch(addBookToApi(BookElement(inputTitle.value, inputAuthor.value)));
     form.reset();
   };
 
