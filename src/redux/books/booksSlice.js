@@ -1,41 +1,51 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+import formattedBookObject from '../../helpers/dataApiFormatted';
 
-const initialState = [
-  {
-    item_id: 'item1',
-    title: 'The Great Gatsby',
-    author: 'John Smith',
-    category: 'Fiction',
-  },
-  {
-    item_id: 'item2',
-    title: 'Anna Karenina',
-    author: 'Leo Tolstoy',
-    category: 'Fiction',
-  },
-  {
-    item_id: 'item3',
-    title: 'The Selfish Gene',
-    author: 'Richard Dawkins',
-    category: 'Nonfiction',
-  },
-];
+const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/nDPnstGPzILIpnHls05G/books';
+
+export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
+  try {
+    const response = await axios(`${baseURL}`);
+    return response.data || [];
+  } catch (error) {
+    return 'Something went wrong. Try again refreshing the page.';
+  }
+});
+
+const initialState = {
+  books: [],
+  isLoading: true,
+  error: null,
+};
 
 const booksSlice = createSlice({
   name: 'books',
   initialState,
-  reducers: {
-    addBook: (state, action) => {
-      state.push(action.payload);
-    },
-    removeBook: (state, action) => {
-      const findBook = state.find((book) => book.item_id === action.payload);
-      if (findBook) {
-        state.splice(state.indexOf(findBook), 1);
-      }
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+    // reducer for fetchBooks action
+      .addCase(fetchBooks.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchBooks.fulfilled, (state, action) => {
+        state.isLoading = false;
+
+        if (typeof action.payload === 'string') {
+          state.error = action.payload;
+          return;
+        }
+
+        const formattedDataBooks = Object.keys(action.payload)
+          .map((key) => formattedBookObject(action.payload[key], key));
+        state.books = [...formattedDataBooks];
+      })
+      .addCase(fetchBooks.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.error.message;
+      });
   },
 });
 
-export const { addBook, removeBook } = booksSlice.actions;
 export default booksSlice.reducer;
