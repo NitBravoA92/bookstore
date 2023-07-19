@@ -23,6 +23,14 @@
   font-family: 'Roboto Slab', serif;
 }
 
+.book-category {
+  margin-bottom: 0.25rem;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #121212;
+}
+
 .book-title {
   font-size: 1.375rem;
   font-weight: 700;
