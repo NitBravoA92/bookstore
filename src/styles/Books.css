@@ -10,7 +10,6 @@
   border: 1px solid #e8e8e8;
 }
 
-
 .book-item:hover {
   border: 1px solid #0290ff;
 }
@@ -221,14 +220,14 @@
   font-size: 10rem;
 }
 
-.alert-icon, 
+.alert-icon,
 .alert-message {
   margin-top: 1rem;
   text-align: center;
 }
 
 .error .alert-message {
-  color: #ff0000;
+  color: #f00;
 }
 
 .loading .alert-message {
