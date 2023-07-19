@@ -1,5 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
+import { FcHighPriority, FcAdvance } from 'react-icons/fc';
+import { TbBookOff } from 'react-icons/tb';
 import Book from './Book';
 import BookForm from './BookForm';
 import { fetchBooks } from '../redux/books/booksSlice';
@@ -16,7 +18,8 @@ const BooksContent = () => {
   if (error) {
     return (
       <div className="error">
-        <p>{error}</p>
+        <div className="alert-icon"><FcHighPriority /></div>
+        <p className="alert-message">{error}</p>
       </div>
     );
   }
@@ -24,7 +27,8 @@ const BooksContent = () => {
   if (isLoading) {
     return (
       <div className="loading">
-        <p>Loading...</p>
+        <div className="alert-icon"><FcAdvance /></div>
+        <p className="alert-message">Loading...</p>
       </div>
     );
   }
@@ -32,7 +36,8 @@ const BooksContent = () => {
   if (books.length === 0) {
     return (
       <div className="no-books">
-        <p>There are no books to display.</p>
+        <div className="alert-icon"><TbBookOff /></div>
+        <p className="alert-message">There are no books to display.</p>
       </div>
     );
   }
