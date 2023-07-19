@@ -22,6 +22,15 @@ export const addBookToApi = createAsyncThunk('books/addBookToApi', async (book) 
   }
 });
 
+export const removeBookFromApi = createAsyncThunk('books/removeBookFromApi', async (bookId) => {
+  try {
+    const response = await axios.delete(`${baseURL}/${bookId}`);
+    return response.data === 'The book was deleted successfully!' ? bookId : null;
+  } catch (error) {
+    return 'Request failed!. The book was not removed. Try Again.';
+  }
+});
+
 const initialState = {
   books: [],
   isLoading: true,
@@ -69,6 +78,21 @@ const booksSlice = createSlice({
         state.books.push(action.payload);
       })
       .addCase(addBookToApi.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.error.message;
+      })
+    // reducer for removeBook action
+      .addCase(removeBookFromApi.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(removeBookFromApi.fulfilled, (state, action) => {
+        state.isLoading = false;
+
+        if (action.payload) {
+          state.books = state.books.filter((book) => book.item_id !== action.payload);
+        }
+      })
+      .addCase(removeBookFromApi.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
       });
