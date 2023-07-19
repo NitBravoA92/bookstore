@@ -153,3 +153,61 @@
   letter-spacing: 0.5px;
   font-family: 'Roboto Slab', serif;
 }
+
+.book-form {
+  margin: 3rem 0.063rem 2.5rem 0;
+  border-top: 1.5px solid #e5e5e5;
+}
+
+.book-form-title {
+  padding: 1.8rem 0 1rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.book-add-book-form {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.book-input {
+  padding: 0.813rem 0.813rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #fff;
+  font-size: 1em;
+  color: #373737;
+}
+
+.book-input::placeholder {
+  color: #888;
+  opacity: 0.4;
+}
+
+#inputTitle {
+  width: 60%;
+}
+
+#inputAuthor {
+  width: 25%;
+}
+
+#btn-add-book {
+  width: 15%;
+  padding: 0.801rem 0.886rem;
+  border: none;
+  border-radius: 3px;
+  background-color: #0290ff;
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
