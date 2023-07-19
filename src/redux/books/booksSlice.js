@@ -13,6 +13,15 @@ export const fetchBooks = createAsyncThunk('books/fetchBooks', async () => {
   }
 });
 
+export const addBookToApi = createAsyncThunk('books/addBookToApi', async (book) => {
+  try {
+    const response = await axios.post(`${baseURL}`, book);
+    return response.data === 'Created' ? book : null;
+  } catch (error) {
+    return 'Request failed! The book was not saved. Try Again.';
+  }
+});
+
 const initialState = {
   books: [],
   isLoading: true,
@@ -42,6 +51,24 @@ const booksSlice = createSlice({
         state.books = [...formattedDataBooks];
       })
       .addCase(fetchBooks.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.error.message;
+      })
+    // reducer for addBook action
+      .addCase(addBookToApi.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(addBookToApi.fulfilled, (state, action) => {
+        state.isLoading = false;
+
+        if (typeof action.payload === 'string') {
+          state.error = action.payload;
+          return;
+        }
+
+        state.books.push(action.payload);
+      })
+      .addCase(addBookToApi.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.error.message;
       });
