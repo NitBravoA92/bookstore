@@ -159,7 +159,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - [x] **Add reducers and actions**
 - [x] **Use Redux to manage the state of the components**
 - [x] **Connect to the Bookstore API**
-- [ ] **Add CSS styles to the UI following a proposed design.**
+- [x] **Add CSS styles to the UI following a proposed design.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
